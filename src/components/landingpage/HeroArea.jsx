@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import BGHeroImage from "../../images/heroimage.png";
 import Container from "@/container/Container";
 
@@ -53,6 +54,32 @@ export default function HeroArea() {
           <p className="text-sm font-light text-gray-700 mt-5">
             Trusted by 10,000+ students & professionals
           </p>
+
+          <div className="mt-8 flex items-center gap-3">
+            <div className="flex -space-x-3">
+              <Image
+                src={BGHeroImage}
+                alt="user"
+                width={40}
+                height={40}
+                className="rounded-full border-2 border-white"
+              />
+              <Image
+                src={BGHeroImage}
+                alt="user"
+                width={40}
+                height={40}
+                className="rounded-full border-2 border-white"
+              />
+              <Image
+                src={BGHeroImage}
+                alt="user"
+                width={40}
+                height={40}
+                className="rounded-full border-2 border-white"
+              />
+            </div>
+          </div>
         </div>
       </Container>
     </div>
