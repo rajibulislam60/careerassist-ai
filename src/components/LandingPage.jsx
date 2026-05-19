@@ -1,5 +1,10 @@
 import React from "react";
+import HeroArea from "./landingpage/HeroArea";
 
 export default function LandingPage() {
-  return <div>Career Assistant AI Landing page.</div>;
+  return (
+    <div>
+      <HeroArea />
+    </div>
+  );
 }
