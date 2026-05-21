@@ -2,9 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import BGHeroImage from "../../images/heroimage.png";
+import BGHeroImage from "../images/heroimage.png";
 import Container from "@/container/Container";
-import Navbar from "./Navbar";
 
 export default function HeroArea() {
   const [active, setActive] = useState("trial");

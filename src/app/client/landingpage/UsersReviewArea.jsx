@@ -4,7 +4,7 @@ import Container from "@/container/Container";
 import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import BGImage from "../../images/heroimage.png";
+import BGImage from "../images/heroimage.png";
 
 const UsersReviewData = [
   {

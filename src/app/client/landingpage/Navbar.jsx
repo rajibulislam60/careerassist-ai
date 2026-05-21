@@ -27,7 +27,7 @@ export default function Navbar() {
               <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
                 Home
               </li>
-              <Link href="/features">
+              <Link href="/client/features">
                 <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
                   Features
                 </li>

@@ -1,15 +1,20 @@
 "use client";
-import Home from "../components/Home";
-import LandingPage from "../components/LandingPage";
+
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function page() {
-  const login = false;
+  const router = useRouter();
 
-  return (
-    <div>
-      {login ? <Home /> : <LandingPage />}
-      {/* <LandingPage /> */}
-      {/* <Home /> */}
-    </div>
-  );
+  const user = true;
+
+  useEffect(() => {
+    if (user) {
+      router.push("/client");
+    } else {
+      router.push("/");
+    }
+  }, [user]);
+
+  return null;
 }
