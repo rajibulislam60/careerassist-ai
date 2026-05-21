@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Container from "@/container/Container";
 import { FaRobot, FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,10 +27,11 @@ export default function Navbar() {
               <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
                 Home
               </li>
-
-              <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
-                Features
-              </li>
+              <Link href="/features">
+                <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
+                  Features
+                </li>
+              </Link>
 
               <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
                 Pricing
