@@ -24,26 +24,35 @@ export default function Navbar() {
 
           <div className="hidden lg:block">
             <ul className="flex gap-8 items-center text-[17px] font-medium">
-              <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
-                Home
-              </li>
+              <Link href="/client">
+                <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
+                  Home
+                </li>
+              </Link>
+
               <Link href="/client/features">
                 <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
                   Features
                 </li>
               </Link>
 
-              <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
-                Pricing
-              </li>
+              <Link href="/client/pricing">
+                <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
+                  Pricing
+                </li>
+              </Link>
 
-              <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
-                About
-              </li>
+              <Link href="/client/about">
+                <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
+                  About
+                </li>
+              </Link>
 
-              <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
-                Blog
-              </li>
+              <Link href="/client/blog">
+                <li className="hover:text-[#614bef] cursor-pointer transition-all duration-300">
+                  Blog
+                </li>
+              </Link>
             </ul>
           </div>
 
