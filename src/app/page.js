@@ -10,9 +10,9 @@ export default function page() {
 
   useEffect(() => {
     if (user) {
-      router.push("/client");
+      router.push("/dashboard");
     } else {
-      router.push("/");
+      router.push("/client");
     }
   }, [user]);
 
