@@ -10,7 +10,7 @@ export default function page() {
 
   useEffect(() => {
     if (user) {
-      router.push("/dashboard");
+      router.push("/dashboard/chat");
     } else {
       router.push("/client");
     }

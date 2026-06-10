@@ -18,14 +18,15 @@ import {
   IoClose,
 } from "react-icons/io5";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import Link from "next/link";
 
 export default function Sidebar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div>
+    <div className="w-[30%]">
       {/* Desktop Sidebar */}
-      <div className="hidden lg:block px-5 py-12 bg-gray-300 min-h-screen">
+      <div className="hidden lg:block px-5 py-5 bg-gray-300 min-h-screen">
         <div className="flex items-center gap-2 py-6">
           <div className="w-10 h-10 rounded-full bg-[#614bef] flex items-center justify-center text-white text-xl">
             <FaRobot />
@@ -37,13 +38,17 @@ export default function Sidebar() {
         </div>
 
         <ul className="flex flex-col gap-4">
-          <li className="flex gap-3 items-center cursor-pointer hover:text-blue-500">
-            <IoHomeOutline /> <span>Dashboard</span>
-          </li>
+          <Link href="/dashboard">
+            <li className="flex gap-3 items-center cursor-pointer hover:text-blue-500">
+              <IoHomeOutline /> <span>Dashboard</span>
+            </li>
+          </Link>
 
-          <li className="flex gap-3 items-center cursor-pointer hover:text-blue-500">
-            <IoChatbubbleEllipsesOutline /> <span>AI Chat</span>
-          </li>
+          <Link href="/dashboard/chat">
+            <li className="flex gap-3 items-center cursor-pointer hover:text-blue-500">
+              <IoChatbubbleEllipsesOutline /> <span>AI Chat</span>
+            </li>
+          </Link>
 
           <li className="flex gap-3 items-center cursor-pointer hover:text-blue-500">
             <IoCompassOutline /> <span>Career Roadmap</span>
