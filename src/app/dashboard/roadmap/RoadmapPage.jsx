@@ -57,8 +57,8 @@ const steps = [
 
 const RoadmapPage = () => {
   return (
-    <div className="min-h-screen bg-slate-50 p-6 lg:p-10">
-      <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-sm p-8">
+    <div className="bg-slate-50 p-2 lg:p-4 h-screen overflow-y-auto">
+      <div className="w-full mx-auto bg-white rounded-3xl shadow-sm p-4">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <div>
@@ -94,14 +94,17 @@ const RoadmapPage = () => {
         {/* Timeline */}
         <div className="relative mt-20">
           {/* Line */}
-          <div className="absolute top-12 left-0 right-0 h-1 bg-slate-200 rounded-full"></div>
+          <div className="absolute top-20 left-0 right-0 h-1 bg-slate-200 rounded-full"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
             {steps.map((item) => (
               <div key={item.id} className="text-center">
+                <h3 className="font-semibold text-md mb-4 text-slate-900">
+                  {item.title}
+                </h3>
                 {/* Circle */}
                 <div
-                  className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center text-3xl border-4
+                  className={`mx-auto w-20 h-20 rounded-full flex items-center justify-center text-2xl border-4
                   
                   ${
                     item.status === "completed"
@@ -135,12 +138,7 @@ const RoadmapPage = () => {
                       : "Up Next"}
                 </span>
 
-                {/* Title */}
-                <h3 className="font-bold text-lg mt-4 text-slate-900">
-                  {item.title}
-                </h3>
-
-                <h4 className="font-semibold text-slate-700 mt-3">
+                <h4 className="font-semibold text-md text-slate-700 mt-3">
                   {item.name}
                 </h4>
 
@@ -154,37 +152,43 @@ const RoadmapPage = () => {
 
         {/* Bottom Section */}
 
-        <div className="mt-20 grid lg:grid-cols-4 gap-5">
-          <div className="rounded-2xl border p-6 bg-slate-50">
-            <h3 className="font-bold text-lg">AI-Powered Insights</h3>
+        <div>
+          <div className="border-t-1 border-gray-300 my-8"></div>
+          <h4 className="uppercase text-md lg:text-xl font-semibold">
+            How Career Assistant AI helps you
+          </h4>
+          <div className="mt-10 grid lg:grid-cols-4 gap-5">
+            <div className="rounded-2xl border p-6 bg-slate-50">
+              <h3 className="font-bold text-lg">AI-Powered Insights</h3>
 
-            <p className="text-slate-500 mt-3">
-              Get personalized insights based on data, not guesswork.
-            </p>
-          </div>
+              <p className="text-slate-500 mt-3">
+                Get personalized insights based on data, not guesswork.
+              </p>
+            </div>
 
-          <div className="rounded-2xl border p-6 bg-slate-50">
-            <h3 className="font-bold text-lg">Personalized Roadmap</h3>
+            <div className="rounded-2xl border p-6 bg-slate-50">
+              <h3 className="font-bold text-lg">Personalized Roadmap</h3>
 
-            <p className="text-slate-500 mt-3">
-              Your unique roadmap adapts as you grow and evolve.
-            </p>
-          </div>
+              <p className="text-slate-500 mt-3">
+                Your unique roadmap adapts as you grow and evolve.
+              </p>
+            </div>
 
-          <div className="rounded-2xl border p-6 bg-slate-50">
-            <h3 className="font-bold text-lg">Smart Recommendations</h3>
+            <div className="rounded-2xl border p-6 bg-slate-50">
+              <h3 className="font-bold text-lg">Smart Recommendations</h3>
 
-            <p className="text-slate-500 mt-3">
-              AI-curated skills, jobs and learning resources.
-            </p>
-          </div>
+              <p className="text-slate-500 mt-3">
+                AI-curated skills, jobs and learning resources.
+              </p>
+            </div>
 
-          <div className="rounded-2xl border p-6 bg-slate-50">
-            <h3 className="font-bold text-lg">24/7 AI Career Coach</h3>
+            <div className="rounded-2xl border p-6 bg-slate-50">
+              <h3 className="font-bold text-lg">24/7 AI Career Coach</h3>
 
-            <p className="text-slate-500 mt-3">
-              Always available to guide your next career move.
-            </p>
+              <p className="text-slate-500 mt-3">
+                Always available to guide your next career move.
+              </p>
+            </div>
           </div>
         </div>
 
