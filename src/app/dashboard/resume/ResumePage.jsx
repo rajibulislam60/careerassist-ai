@@ -75,53 +75,127 @@ export default function ResumePage() {
           </div>
         ))}
       </div>
-      <div className="bg-white border border-gray-200 rounded-2xl mt-4 lg:mt-8 p-6">
-        {/* Header */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
-          <h3 className="text-xl lg:text-2xl font-semibold text-gray-900">
-            Resume Template
-          </h3>
+      {/* Resume area */}
+      <div className="lg:flex gap-4 mt-4 lg:mt-8 ">
+        <div className="w-full lg:w-[75%]">
+          <div className="bg-white border border-gray-200 rounded-2xl p-6">
+            {/* Header */}
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
+              <h3 className="text-xl lg:text-2xl font-semibold text-gray-900">
+                Resume Template
+              </h3>
 
-          <div className="flex flex-col sm:flex-row gap-3">
-            <select className="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500">
-              <option value="Modern">Modern</option>
-              <option value="Professional">Professional</option>
-              <option value="Creative">Creative</option>
-            </select>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <select className="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500">
+                  <option value="Modern">Modern</option>
+                  <option value="Professional">Professional</option>
+                  <option value="Creative">Creative</option>
+                </select>
 
-            <button className="px-5 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-all">
-              Change Template
-            </button>
+                <button className="px-5 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-all">
+                  Change Template
+                </button>
+              </div>
+            </div>
+
+            {/* Resume Preview */}
+            <div className="border border-gray-200 rounded-xl bg-gray-50 min-h-[600px] flex items-center justify-center mb-6">
+              <p className="text-gray-500">Resume Preview Here</p>
+            </div>
+          </div>
+          {/* Quick Actions */}
+          <div className="py-4">
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">
+              Quick Actions
+            </h4>
+
+            <div className="flex flex-wrap gap-3">
+              <button className="px-4 py-2 border border-violet-200 bg-violet-50 text-violet-700 rounded-lg hover:bg-violet-100 transition-all">
+                ✨ AI Optimize
+              </button>
+
+              <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
+                📝 Improve Bullet Points
+              </button>
+
+              <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
+                📊 Check ATS Score
+              </button>
+
+              <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
+                ✔️ Spell Check
+              </button>
+            </div>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-2xl mt-4 lg:mt-8 p-6">
+            <h3 className="text-lg lg:text-xl font-semibold text-gray-900">
+              Tailor Your Resume for a Specific Job
+            </h3>
+
+            <p className="text-sm text-gray-500 mt-2 max-w-2xl">
+              Paste the job description below and our AI will optimize your
+              resume to match the role, keywords, and ATS requirements.
+            </p>
+
+            <div className="mt-5">
+              <textarea
+                rows={6}
+                placeholder="Paste job description here..."
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm outline-none resize-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+              />
+            </div>
+
+            <div className="mt-5">
+              <button className="px-6 py-3 bg-violet-600 text-white rounded-xl font-medium hover:bg-violet-700 transition-all shadow-sm">
+                ✨ Tailor My Resume
+              </button>
+            </div>
           </div>
         </div>
+        {/* Rating area */}
+        <div className="w-full lg:w-[25%]">
+          <div className="bg-white border border-gray-200 rounded-2xl p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              AI Resume Score
+            </h3>
 
-        {/* Resume Preview */}
-        <div className="border border-gray-200 rounded-xl bg-gray-50 min-h-[600px] flex items-center justify-center mb-6">
-          <p className="text-gray-500">Resume Preview Here</p>
-        </div>
-      </div>
-      {/* Quick Actions */}
-      <div className="py-4">
-        <h4 className="text-lg font-semibold text-gray-900 mb-4">
-          Quick Actions
-        </h4>
+            {/* Score Circle */}
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-28 h-28 rounded-full border-8 border-green-500 flex items-center justify-center">
+                <span className="text-3xl font-bold text-gray-900">92%</span>
+              </div>
+            </div>
 
-        <div className="flex flex-wrap gap-3">
-          <button className="px-4 py-2 border border-violet-200 bg-violet-50 text-violet-700 rounded-lg hover:bg-violet-100 transition-all">
-            ✨ AI Optimize
-          </button>
+            {/* Status */}
+            <div className="text-center">
+              <h4 className="text-2xl font-bold text-green-600">
+                Excellent Match!
+              </h4>
 
-          <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
-            📝 Improve Bullet Points
-          </button>
+              <p className="text-gray-500 mt-2">
+                Your resume is highly optimized for your target role and ATS
+                systems.
+              </p>
+            </div>
 
-          <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
-            📊 Check ATS Score
-          </button>
+            {/* Score Breakdown */}
+            <div className="mt-6 space-y-3">
+              <div className="flex justify-between">
+                <span className="text-gray-600">ATS Compatibility</span>
+                <span className="font-semibold text-green-600">95%</span>
+              </div>
 
-          <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
-            ✔️ Spell Check
-          </button>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Keyword Match</span>
+                <span className="font-semibold text-green-600">90%</span>
+              </div>
+
+              <div className="flex justify-between">
+                <span className="text-gray-600">Readability</span>
+                <span className="font-semibold text-green-600">91%</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
