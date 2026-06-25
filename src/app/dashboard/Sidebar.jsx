@@ -56,9 +56,11 @@ export default function Sidebar() {
             </li>
           </Link>
 
-          <li className="flex gap-3 items-center cursor-pointer hover:text-blue-500">
-            <IoDocumentTextOutline /> <span>Resume Builder</span>
-          </li>
+          <Link href="/dashboard/resume">
+            <li className="flex gap-3 items-center cursor-pointer hover:text-blue-500">
+              <IoDocumentTextOutline /> <span>Resume Builder</span>
+            </li>
+          </Link>
 
           <li className="flex gap-3 items-center cursor-pointer hover:text-blue-500">
             <IoSchoolOutline /> <span>Interview Prep</span>
