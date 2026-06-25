@@ -25,7 +25,7 @@ const chooseItems = [
 
 export default function ResumePage() {
   return (
-    <div>
+    <div className="p-6 h-screen overflow-y-auto">
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8">
         <div>
@@ -74,6 +74,55 @@ export default function ResumePage() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="bg-white border border-gray-200 rounded-2xl mt-4 lg:mt-8 p-6">
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
+          <h3 className="text-xl lg:text-2xl font-semibold text-gray-900">
+            Resume Template
+          </h3>
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <select className="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500">
+              <option value="Modern">Modern</option>
+              <option value="Professional">Professional</option>
+              <option value="Creative">Creative</option>
+            </select>
+
+            <button className="px-5 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-all">
+              Change Template
+            </button>
+          </div>
+        </div>
+
+        {/* Resume Preview */}
+        <div className="border border-gray-200 rounded-xl bg-gray-50 min-h-[600px] flex items-center justify-center mb-6">
+          <p className="text-gray-500">Resume Preview Here</p>
+        </div>
+      </div>
+      {/* Quick Actions */}
+      <div className="py-4">
+        <h4 className="text-lg font-semibold text-gray-900 mb-4">
+          Quick Actions
+        </h4>
+
+        <div className="flex flex-wrap gap-3">
+          <button className="px-4 py-2 border border-violet-200 bg-violet-50 text-violet-700 rounded-lg hover:bg-violet-100 transition-all">
+            ✨ AI Optimize
+          </button>
+
+          <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
+            📝 Improve Bullet Points
+          </button>
+
+          <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
+            📊 Check ATS Score
+          </button>
+
+          <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
+            ✔️ Spell Check
+          </button>
+        </div>
       </div>
     </div>
   );
