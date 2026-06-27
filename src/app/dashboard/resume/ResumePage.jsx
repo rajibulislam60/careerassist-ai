@@ -1,4 +1,5 @@
 import React from "react";
+import { FaLightbulb, FaCheckCircle } from "react-icons/fa";
 
 const chooseItems = [
   {
@@ -195,6 +196,29 @@ export default function ResumePage() {
                 <span className="font-semibold text-green-600">91%</span>
               </div>
             </div>
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-50 p-6 shadow-sm">
+            <div className="flex items-center gap-3 mb-5">
+              <FaLightbulb className="text-2xl text-yellow-500" />
+              <h3 className="text-xl lg:text-2xl font-bold text-blue-800">
+                Pro Tips
+              </h3>
+            </div>
+
+            <ul className="space-y-4">
+              {[
+                "Keep your resume to 1–2 pages.",
+                "Use action verbs to start your bullet points.",
+                "Quantify your achievements with numbers.",
+                "Customize your resume for each job application.",
+              ].map((tip, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <FaCheckCircle className="mt-1 text-green-500 shrink-0" />
+                  <span className="text-gray-700">{tip}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
