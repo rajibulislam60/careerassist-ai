@@ -3,7 +3,7 @@ import { FaRobot, FaPlay, FaUpload, FaArrowRight } from "react-icons/fa";
 
 export default function InterviewPage() {
   return (
-    <div className="space-y-6">
+    <div className="py-8 space-y-6 h-screen overflow-y-auto">
       {/* Top Header */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
         <div>
