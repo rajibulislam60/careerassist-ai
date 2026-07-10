@@ -49,7 +49,7 @@ export default function SkillScore() {
   };
 
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl mt-8 p-8">
+    <div className="bg-white border border-slate-200 rounded-2xl p-8">
       <div className="flex flex-col lg:flex-row items-center gap-12">
         {/* Left Side */}
         <div className="text-center">
